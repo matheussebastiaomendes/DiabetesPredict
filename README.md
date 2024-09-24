@@ -18,6 +18,7 @@ O primeiro objetivo é responder às seguintes perguntas sobre o dataset:
 - Qual a probabilidade de cada gênero ter diabetes?
 - Como está a distribuição das informações fumantes por idade?
 - O gênero impacta no nivel de glicose no sangue?
+- Qual a relação entre as features e o target?
 
 
 ### 🛠️ Ferramentas utilizadas
