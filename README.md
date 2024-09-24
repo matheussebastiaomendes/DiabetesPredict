@@ -1,13 +1,12 @@
+
+# Modelo Preditivo para diagnóstico de diabetes 
+
+Os dados podem ser encontrados no [Kaggle](https://www.kaggle.com/datasets/priyamchoksi/100000-diabetes-clinical-dataset) e foram disponibilizados por [Priyam Choksi](https://www.kaggle.com/priyamchoksi).
+
 # DiabetesPredict
-Modelo de machine learning para a predição do de diagnosticos de diabetes
 
-# Modelo Preditivo para preços de veículos 🚗
+A diabetes é uma condição crônica que afeta a forma como o corpo metaboliza a glicose, um tipo de açúcar que serve como principal fonte de energia. Existem diferentes tipos de diabetes, sendo os mais comuns o tipo 1 e o tipo 2. No diabetes tipo 1, o corpo não produz insulina, o hormônio responsável por regular os níveis de açúcar no sangue. Já no tipo 2, o corpo não utiliza a insulina de maneira eficaz ou não produz insulina suficiente.
 
-Neste projeto, será feita uma análise exploratória dos dados e a elaboração de um modelo preditivo utilizando LightGBM e Random Forest. Os dados podem ser encontrados no [Kaggle](https://www.kaggle.com/datasets/hellbuoy/car-price-prediction/data) e foram disponibilizados por [Manish Kumar](https://www.kaggle.com/hellbuoy).
-
-### Problema de negócio
-
-A empresa Toad Motors, especializada na venda de veículos, está buscando entender melhor o mercado de carros que comercializa. A empresa possui um vasto conjunto de dados sobre diferentes marcas e modelos de carros, incluindo informações como preço, potência, consumo urbano, comprimento, largura e tipo de carroceria. O objetivo é usar esses dados para otimizar suas estratégias de precificação e melhorar a oferta de produtos.
 
 ![](foto)
 
@@ -15,12 +14,11 @@ A empresa Toad Motors, especializada na venda de veículos, está buscando enten
 
 O primeiro objetivo é responder às seguintes perguntas sobre o dataset:
 
-- Qual é a quantidade de carros por marca?
-- Quais as marcas que possuem a maior média de preço de carros?
-- Como o preço se comporta em relação à potência, consumo urbano, comprimento e largura do carro?
-- O tipo de carroceria influencia no preço do veículo?
+- Qual é a predominância de diabetes entre os gêneros?
+- Qual a probabilidade de cada gênero ter diabetes?
+- Como está a distribuição das informações fumantes por idade?
+- O gênero impacta no nivel de glicose no sangue?
 
-Já a predição dos preços tem por objetivo desenvolver e utilizar um modelo de previsão de preço para estimar o valor de mercado dos carros com base nas suas características. Isso permitirá à empresa ajustar os preços dos veículos de forma mais precisa e competitiva, além de ajudar na avaliação de novos modelos e marcas.
 
 ### 🛠️ Ferramentas utilizadas
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)
@@ -57,72 +55,73 @@ As colunas do dataset estão organizadas da seguinte forma:
 - Seaborn, Matplotlib.
 #### Machine Learning
 - sklearn (scikit-learn)
-- lightgbm
+- xgboost (XGBoost Classifier)
 
 # Análise exploratória de dados 
 
-## Qual é a quantidade de carros por marca?
-
-![](https://github.com/matheussebastiaomendes/ml_lgbmodel/blob/main/imagens/qtd_por_marca_top_10.png)
-
-A marca que lidera com certa vantagem quando comparada à segunda colocada é a Toyota com 32 veículos, seguida da Nissan com 18 e a Mazda com 17. As demais marcas ficaram entre 13 e 9 veículos.
-
-## Quais as marcas que possuem a maior média de preço de carros?
-
-![](https://github.com/matheussebastiaomendes/ml_lgbmodel/blob/main/imagens/media_preco_marca_top_10.png).
-
-O top 3 das marcas que possuem maior média de preço dos veículos são Jaguar, Buick e Porsche, ficando na média de R$ 31.000 a R$ 34.600. Outra marca que possui uma média de valor considerável quando comparada às outras é a BMW, que fica em torno de R$ 26.100. As demais marcas ficam em uma faixa de preço entre R$ 15.000 a R$ 18.000.
-
-## Como o preço se comporta em relação à potência, consumo urbano, comprimento e largura do carro?
-
-![](https://github.com/matheussebastiaomendes/ml_lgbmodel/blob/main/imagens/comportamento.png)
-
-Analisando o gráfico, podemos concluir que o preço diminui conforme um maior consumo urbano e aumenta se potência, largura do carro e comprimento aumentam.
-
-## O tipo de carroceria influencia no preço do veículo?
-
-![](https://github.com/matheussebastiaomendes/ml_lgbmodel/blob/main/imagens/comportamento_carroceria.png)
-
-No dataset, encontramos 5 tipos de carroceria: conversível, hatchback, sedan, wagon (hatchback alongado) e hardtop. Podemos analisar que os carros conversíveis estão em um patamar de preço mais elevado que as carrocerias mais encontradas no dataset, que possuem uma faixa de preços mais acessíveis devido à maior disponibilidade e variação de modelos. A carroceria hardtop possui um intervalo de preço maior.
+## Colocar as perguntas e os resultados?
 
 # Modelo de Predição
 
 ## Pré-processamento dos dados
 As colunas numéricas e categóricas foram separadas e tratadas. As colunas numéricas receberam um imputer de mediana da coluna analisada nos valores faltantes. Além disso, também foi feito Standard Scaler para a padronização dos dados, para ter média zero e variância unitária. Já nas colunas categóricas, utilizamos o OneHotEncoder para sua transformação.
 
-## Feature selection
-Após o tratamento das colunas, utilizamos o SelectKBest para a seleção das features que têm maior impacto no modelo. Para este modelo, selecionamos 10.
+## Balanceamento de classes
 
-## LightGBM
+Verificamos que a classe minoritária (1 - possui diabetes)  possui uma representatividade quase definirX menor que a classe majoritária (0 - não possui diabetes), esse desbalanceamento pode influenciar no desempenho do modelo, para tratar esse desbalanceamento optei por utilizar um Class Weight
+
+Calculando chegamos no seguinte peso para cada uma das classes:
+
+## Feature selection
+Após o tratamento das colunas, utilizamos o Rfe para a seleção das features que têm maior impacto no modelo.
+
+## Random Forest Classifier
+
+Utilizamos os seguintes parametros no modelo
+
 ## Métricas
 As métricas do modelo 
 
 | Métrica   | Resultado   |
 |-----------|-------------|
-| RMSE      | 3378.7426   |
-| R² Score  | 0.8352      |
-| MAE       | 2221.6420   |
-| MSE       | 11415901.6063 |
-| MAPE      | 0.1566      |
+| Accuracy  |             |
+| Precison  |             |
+| Recall    |             |
+|           |             |
 
 ![](https://github.com/matheussebastiaomendes/modelo_predicao/blob/main/imagens/comportamento_modelo_LGBMODEL.png)
 
-As previsões ficam com um erro maior conforme aumentamos o valor dos carros. Testaremos outro modelo para analisar se os valores se adequam melhor à reta.
+## Métricas apuradas após a validação cruzada
 
-## Random Forest
+A validação cruzada divide o dataset em varias partições os chamados folds, separa partes diferentes dos dados em cada fold para treinamento e validação, a partir dai extraimos as métricas de avaliação de cada treinamento realizado e fazemos uma média dos resultados, nos trazendo uma visão mais realista do real desempenho do modelo.
 
-Para este modelo, mantivemos o tratamento das colunas numéricas e categóricas e incluímos alguns parâmetros do modelo Random Forest.
+| Métrica   | Resultado   |
+|-----------|-------------|
+| Accuracy  |             |
+| Precison  |             |
+| Recall    |             |
+|           |             |
+
+## Xgboost Classifier
+
+Para este modelo, mantivemos o tratamento das colunas numéricas e categóricas e incluímos alguns parâmetros do modelo Xgboost Classifier.
 
 As métricas do modelo 
 
 | Métrica   | Resultado   |
 |-----------|-------------|
-| RMSE      | 2180.4615   |
-| R² Score  | 0.9314      |
-| MAE       | 1480.7826   |
-| MSE       | 4754412.1706 |
-| MAPE      | 0.1097      |
+| Accuracy  |             |
+| Precison  |             |
+| Recall    |             |
+|           |             |
 
 ![](https://github.com/matheussebastiaomendes/modelo_predicao/blob/main/imagens/comportamento_modelo_RANDOM_FOREST.png)
 
-Neste segundo modelo, podemos ver uma melhora nas métricas com erros menores comparados ao anterior. No gráfico, vemos que os valores da previsão estão muito mais ajustados à reta, ficando bem próximos dos valores reais. Sendo assim, esse é o modelo escolhido para realizar as previsões dos preços dos carros.
+## Métricas apuradas após a validação cruzada
+
+| Métrica   | Resultado   |
+|-----------|-------------|
+| Accuracy  |             |
+| Precison  |             |
+| Recall    |             |
+|           |             |
