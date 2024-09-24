@@ -31,31 +31,23 @@ As colunas do dataset estão organizadas da seguinte forma:
 
 | Coluna                       | Descrição                                                       |
 |------------------------------|-----------------------------------------------------------------|
-| nome_do_Carro                | Nome completo do carro                                         |
-| marca                        | Nome da marca do carro                                         |
-| tipo_de_combustível          | Tipo de combustível usado pelo carro                            |
-| aspiração                    | Tipo de aspiração do motor (por exemplo, aspirado, turbo)       |
-| número_de_portas             | Número de portas do carro                                       |
-| tipo_de_carroceria           | Tipo de carroceria (por exemplo, sedan, SUV, hatchback)         |
-| rodas_motrizes               | Tipo de tração (por exemplo, tração dianteira, tração integral) |
-| localização_do_motor         | Localização do motor no carro (por exemplo, dianteiro, traseiro)|
-| distância_entre_eixos        | Distância entre os eixos do carro                               |
-| comprimento_do_carro         | Comprimento total do carro                                      |
-| largura_do_carro             | Largura total do carro                                          |
-| altura_do_carro              | Altura total do carro                                           |
-| peso_em_ordem_de_marcha      | Peso do carro em ordem de marcha                                |
-| tipo_de_motor                | Tipo de motor (por exemplo, V6, V8)                             |
-| número_de_cilindros          | Número de cilindros no motor                                    |
-| tamanho_do_motor             | Tamanho do motor                                                |
-| sistema_de_combustível       | Sistema de fornecimento de combustível (por exemplo, injeção)   |
-| diâmetro_do_cilindro         | Diâmetro dos cilindros do motor                                 |
-| curso_do_pistão              | Curso dos pistões do motor                                      |
-| taxa_de_compressão           | Taxa de compressão do motor                                     |
-| potência                     | Potência do motor (em HP ou kW)                                 |
-| rpm_máximo                   | Número máximo de rotações por minuto do motor                   |
-| consumo_urbano               | Consumo de combustível em ambiente urbano (km/litro)            |
-| consumo_rodoviário           | Consumo de combustível em estrada (km/litro)                    |
-| preço                        | Preço do carro                                                  |
+| year                         | Ano em que os dados foram recolhidos                            |
+| gender                       | Género da pessoa (por exemplo, "masculino" ou "feminino").      |                          
+| age          		             | Idade da pessoa (em anos)                                       |
+| location                     | Localização geográfica                                          |
+| race:AfricanAmerican         | Pessoa se identifica como afro-americana (1 = Sim, 0 = Não)     |                          
+| race:Asian           	       | Pessoa se identifica como asiática (1 = Sim, 0 = Não)           |
+| race:Caucasian               | Pessoa se identifica como caucasiana (1 = Sim, 0 = Não)         |
+| race:Hispanic                | Pessoa se identifica como hispânica (1 = Sim, 0 = Não).         |
+| race:Other                   | Pessoa se identifica como outra raça (1 = Sim, 0 = Não)         |                          
+| hypertension                 | Indica se a pessoa tem hipertensão (1 = Sim, 0 = Não)		       |
+| heart_disease                | Indica se a pessoa tem alguma doença cardíaca(1 = Sim, 0 = Não) |                          
+| smoking_history              | Histórico de tabagismo da pessoa                                |
+| bmi                	         | Índice de Massa Corporal (IMC)                                  |                    
+| hbA1c_level	                 | Nível de hemoglobina glicada (HbA1c                             |
+| blood_glucose_level	         | Nível de glicose no sangue no momento da medição                |                          
+| diabetes      	             | Indica se a pessoa tem diabetes (1 = Sim, 0 = Não) 		         |
+
 
 ## Bibliotecas utilizadas
 
