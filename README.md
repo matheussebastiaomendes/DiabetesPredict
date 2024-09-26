@@ -1,12 +1,16 @@
-
-# Modelo Preditivo para diagnóstico de diabetes 
-
-Os dados podem ser encontrados no [Kaggle](https://www.kaggle.com/datasets/priyamchoksi/100000-diabetes-clinical-dataset) e foram disponibilizados por [Priyam Choksi](https://www.kaggle.com/priyamchoksi).
-
-# DiabetesPredict
+# Diabetes
 
 A diabetes é uma condição crônica que afeta a forma como o corpo metaboliza a glicose, um tipo de açúcar que serve como principal fonte de energia. Existem diferentes tipos de diabetes, sendo os mais comuns o tipo 1 e o tipo 2. No diabetes tipo 1, o corpo não produz insulina, o hormônio responsável por regular os níveis de açúcar no sangue. Já no tipo 2, o corpo não utiliza a insulina de maneira eficaz ou não produz insulina suficiente.
 
+# Modelo Preditivo para diagnóstico de diabetes 
+
+Com base no dataset e nas suas características relevantes, desenvolvemos um modelo de machine learning focado na previsão de pacientes que são positivos para diabetes. Inicialmente, foi realizada uma análise exploratória dos dados para identificar padrões, correlações e potenciais outliers, o que nos permitiu uma melhor compreensão do conjunto de dados.
+
+Optámos por testar vários algoritmos de machine learning, comoRandom Forest e XGBoost Classifier, para avaliar qual se adequaria melhor à previsão de diagnósticos de diabetes. Após a fase de treino e validação, o modelo foi otimizado através de técnicas como a validação cruzada e ajuste de hiperparâmetros, maximizando a sua precisão e reduzindo os falsos negativos, que são críticos numa condição como a diabetes.
+
+Com o modelo final, é possível prever com elevada precisão quais pacientes têm maior probabilidade de serem diagnosticados com diabetes, ajudando assim profissionais de saúde a tomar decisões mais informadas e a implementar medidas preventivas com maior antecedência.
+
+Os dados podem ser encontrados no [Kaggle](https://www.kaggle.com/datasets/priyamchoksi/100000-diabetes-clinical-dataset) e foram disponibilizados por [Priyam Choksi](https://www.kaggle.com/priyamchoksi).
 
 ![](foto)
 
@@ -60,7 +64,19 @@ As colunas do dataset estão organizadas da seguinte forma:
 
 # Análise exploratória de dados 
 
-## Colocar as perguntas e os resultados?
+## Qual é a predominância de diabetes entre os gêneros?
+colocar grafico  e tabela
+
+A distribuição de pacientes com e sem diabetes está bem equilibrada, 
+
+## Qual a probabilidade de cada gênero ter diabetes?
+
+## Como está a distribuição das informações fumantes por idade?
+
+## O gênero impacta no nivel de glicose no sangue?
+
+## Qual a relação entre as features e o target?
+
 
 # Modelo de Predição
 
@@ -88,7 +104,7 @@ As métricas do modelo
 | Accuracy  |             |
 | Precison  |             |
 | Recall    |             |
-|           |             |
+| Roc Auc   |             |
 
 ![](https://github.com/matheussebastiaomendes/modelo_predicao/blob/main/imagens/comportamento_modelo_LGBMODEL.png)
 
@@ -101,7 +117,7 @@ A validação cruzada divide o dataset em varias partições os chamados folds, 
 | Accuracy  |             |
 | Precison  |             |
 | Recall    |             |
-|           |             |
+| Roc Auc   |             |
 
 ## Xgboost Classifier
 
@@ -114,7 +130,7 @@ As métricas do modelo
 | Accuracy  |             |
 | Precison  |             |
 | Recall    |             |
-|           |             |
+| Roc Auc   |             |
 
 ![](https://github.com/matheussebastiaomendes/modelo_predicao/blob/main/imagens/comportamento_modelo_RANDOM_FOREST.png)
 
@@ -125,4 +141,4 @@ As métricas do modelo
 | Accuracy  |             |
 | Precison  |             |
 | Recall    |             |
-|           |             |
+| Roc Auc   |             |
