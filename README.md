@@ -85,7 +85,7 @@ As colunas numéricas e categóricas foram separadas e tratadas. As colunas num�
 
 ## Balanceamento de classes
 
-Verificamos que a classe minoritária (1 - possui diabetes)  possui uma representatividade de 8.60 % e a classe majoritária (0 - não possui diabetes) 91.40 %, esse desbalanceamento pode influenciar no desempenho do modelo, para tratar esse desbalanceamento optei por utilizar um Class Weight
+Verificamos que a classe minoritária (1 - tem diabetes)  possui uma representatividade de 8.60 % e a classe majoritária (0 - não tem diabetes) 91.40 %, esse desbalanceamento pode influenciar no desempenho do modelo, para tratar esse desbalanceamento optei por utilizar um Class Weight
 
 Calculando chegamos no seguinte peso para cada uma das classes:
 
