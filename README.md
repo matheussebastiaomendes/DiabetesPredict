@@ -85,9 +85,15 @@ As colunas numéricas e categóricas foram separadas e tratadas. As colunas num�
 
 ## Balanceamento de classes
 
-Verificamos que a classe minoritária (1 - possui diabetes)  possui uma representatividade quase definirX menor que a classe majoritária (0 - não possui diabetes), esse desbalanceamento pode influenciar no desempenho do modelo, para tratar esse desbalanceamento optei por utilizar um Class Weight
+Verificamos que a classe minoritária (1 - possui diabetes)  possui uma representatividade de 8.60 % e a classe majoritária (0 - não possui diabetes) 91.40 %, esse desbalanceamento pode influenciar no desempenho do modelo, para tratar esse desbalanceamento optei por utilizar um Class Weight
 
 Calculando chegamos no seguinte peso para cada uma das classes:
+
+| Classe    | Peso         |
+|-----------|-------------|
+| 0  | 0.5480853551593101 |
+| 1  |5.699088145896656   |
+
 
 ## Feature selection
 Após o tratamento das colunas, utilizamos o Rfe para a seleção das features que têm maior impacto no modelo.
