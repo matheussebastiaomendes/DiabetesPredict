@@ -65,18 +65,22 @@ As colunas do dataset estão organizadas da seguinte forma:
 # Análise exploratória de dados 
 
 ## Qual é a predominância de diabetes entre os gêneros?
-colocar grafico  e tabela
 
-A distribuição de pacientes com e sem diabetes está bem equilibrada, 
+![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3odeDiabetes%20(2).png)
 
 ## Qual a probabilidade de cada gênero ter diabetes?
 
 ## Como está a distribuição das informações fumantes por idade?
 
+![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3odeDiabetes%20(2).png)
+
 ## O gênero impacta no nivel de glicose no sangue?
 
-## Qual a relação entre as features e o target?
+![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3o%20de%20concentra%C3%A7%C3%A3o%20de%20glicose%20no%20sangue.png)
 
+## Qual a relação entre as features e o target?
+![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3o%20de%20idade.png)
+![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3o%20de%20nivel_hbA1c.png)
 
 # Modelo de Predição
 
