@@ -20,7 +20,6 @@ O primeiro objetivo é responder às seguintes perguntas sobre o dataset:
 
 - Qual é a predominância de diabetes entre os gêneros?
 - Qual a probabilidade de cada gênero ter diabetes?
-- Como está a distribuição das informações fumantes por idade?
 - O gênero impacta no nivel de glicose no sangue?
 - Qual a relação entre as features e o target?
 
@@ -68,7 +67,7 @@ As colunas do dataset estão organizadas da seguinte forma:
 
 ![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3odeDiabetes%20(2).png)
 
-A quantidade de mulheres presentes no dataset é relativamente maior comparada ao número de homens, entretanto podemos perceber que a quantidade de mulheres que possuem diabetes segue semelhante aos homens, o que gera uma proporção menor de mulheres com diabetes conforme dados da tabela a baixo:
+A quantidade de mulheres presentes no dataset é relativamente maior , entretanto podemos perceber que a quantidade de mulheres que possuem diabetes segue semelhante aos homens, o que gera uma proporção menor de mulheres com diabetes conforme dados da tabela a baixo:
 
 | diabetes| 0 |1|
 |-------- |--|--|
@@ -76,11 +75,7 @@ A quantidade de mulheres presentes no dataset é relativamente maior comparada a
 |Mulher|92.34|7.66|
 
 No dataset homens tem um probabilidade maior de ter diabetes.
-
-## Como está a distribuição das informações fumantes por idade?
-
-![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3odeDiabetes%20(2).png)
-
+  
 ## O gênero impacta no nivel de glicose no sangue?
 
 ![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3o%20de%20concentra%C3%A7%C3%A3o%20de%20glicose%20no%20sangue.png)
