@@ -65,7 +65,7 @@ As colunas do dataset estão organizadas da seguinte forma:
 
 ## Qual é a predominância de diabetes entre os gêneros?
 
-![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3odeDiabetes%20(2).png)
+![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3odeDiabetes.png)
 
 A quantidade de mulheres presentes no dataset é relativamente maior , entretanto podemos perceber que a quantidade de mulheres que possuem diabetes segue semelhante aos homens, o que gera uma proporção menor de mulheres com diabetes conforme dados da tabela a baixo:
 
@@ -83,23 +83,28 @@ No dataset homens tem um probabilidade maior de ter diabetes.
 A concentração de glicose no sangue entre os gêneros segue um mesmo padrão, não havendo impacto o gênero.
 
 ## Qual a relação entre as features e o target?
-![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3o%20de%20idade.png)
+
+### Ano x diabetes
+![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3o%20de%20ano.png)
 A maior parte dos casos de diabetes estão listado em 2019
 
-COLOCAR GRAFICO DE DIABETES X IDADE
+### Idade x diabetes
+![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3o%20de%20idade.png)
 
 Podemos verificar que a distribuição de casos positivos para diabetes segue uma distribuição bimodal, onde podemos verificar 2 picos, indicando que existem duas subpopulações distintas dentro dos dados, na casa dos 60 anos e 80. Há um crescente numero de casos a partir dos 40 anos, tendo seu ápice de casos positivos para diabetes perto dos 60 anos de idade
 
-COLOCAR GREAFICO DO IMC
+### Imc x diabetes
+![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3o%20de%20idade.png)
 
 O imc apresenta um comportamento parecido nas duas classes, positiva e negativa, ambos tem um pico na casa dos 30, analisando o as distriuições podemos concluir que essa feature em relação ao target tem baixa variabilidade explicativa.
 
-COLOCAR GREAFICO DE HBA1C
-
-Pessoas que tem diabetes apresentam nivel de HBA1C maiores que 5, tendo uma alta concentração de pessoas com niveis proximos de 6 e 9.
+### hbA1c x diabetes
 ![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3o%20de%20nivel_hbA1c.png)
 
-COLOCAR GRAFICO DE GLICOSE SANGUINEA
+Pessoas que tem diabetes apresentam nivel de HBA1C maiores que 5, tendo uma alta concentração de pessoas com niveis proximos de 6 e 9.
+
+### Nivel de glicose no sangue x diabetes
+![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3o%20de%20nivel_glicose_sanguinea.png)
 
 A prensença de diabetes está com maior concentração em niveis de glicose sanguinea proxima a 150
 
@@ -129,6 +134,7 @@ Utilizamos os seguintes parametros no modelo
 
 ## Métricas
 As métricas do modelo 
+
 
 | Métrica   | Resultado   |
 |-----------|-------------|
