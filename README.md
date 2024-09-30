@@ -20,7 +20,6 @@ O primeiro objetivo é responder às seguintes perguntas sobre o dataset:
 
 - Qual é a predominância de diabetes entre os gêneros?
 - Qual a probabilidade de cada gênero ter diabetes?
-- Como está a distribuição das informações fumantes por idade?
 - O gênero impacta no nivel de glicose no sangue?
 - Qual a relação entre as features e o target?
 
@@ -34,21 +33,21 @@ As colunas do dataset estão organizadas da seguinte forma:
 
 | Coluna                       | Descrição                                                       |
 |------------------------------|-----------------------------------------------------------------|
-| year                         | Ano em que os dados foram recolhidos                            |
-| gender                       | Género da pessoa (por exemplo, "masculino" ou "feminino").      |                          
-| age          		             | Idade da pessoa (em anos)                                       |
-| location                     | Localização geográfica                                          |
-| race:AfricanAmerican         | Pessoa se identifica como afro-americana (1 = Sim, 0 = Não)     |                          
-| race:Asian           	       | Pessoa se identifica como asiática (1 = Sim, 0 = Não)           |
-| race:Caucasian               | Pessoa se identifica como caucasiana (1 = Sim, 0 = Não)         |
-| race:Hispanic                | Pessoa se identifica como hispânica (1 = Sim, 0 = Não).         |
-| race:Other                   | Pessoa se identifica como outra raça (1 = Sim, 0 = Não)         |                          
-| hypertension                 | Indica se a pessoa tem hipertensão (1 = Sim, 0 = Não)		       |
-| heart_disease                | Indica se a pessoa tem alguma doença cardíaca(1 = Sim, 0 = Não) |                          
-| smoking_history              | Histórico de tabagismo da pessoa                                |
-| bmi                	         | Índice de Massa Corporal (IMC)                                  |                    
-| hbA1c_level	                 | Nível de hemoglobina glicada (HbA1c                             |
-| blood_glucose_level	         | Nível de glicose no sangue no momento da medição                |                          
+| ano                         | Ano em que os dados foram recolhidos                            |
+| genero                       | Género da pessoa (por exemplo, "masculino" ou "feminino").      |                          
+| idade          		             | Idade da pessoa (em anos)                                       |
+| localizacao                     | Localização geográfica                                          |
+| raca:AfricanoAmericano         | Pessoa se identifica como afro-americana (1 = Sim, 0 = Não)     |                          
+| raca:Asiatico           	       | Pessoa se identifica como asiática (1 = Sim, 0 = Não)           |
+| raca:Caucasiano               | Pessoa se identifica como caucasiana (1 = Sim, 0 = Não)         |
+| raca:Hispanico                | Pessoa se identifica como hispânica (1 = Sim, 0 = Não).         |
+| raca:Outro                   | Pessoa se identifica como outra raça (1 = Sim, 0 = Não)         |                          
+| hipertensao                 | Indica se a pessoa tem hipertensão (1 = Sim, 0 = Não)		       |
+| doenca_cardiaca                | Indica se a pessoa tem alguma doença cardíaca(1 = Sim, 0 = Não) |                          
+| historico_de_fumante              | Histórico de tabagismo da pessoa                                |
+| imc                	         | Índice de Massa Corporal (IMC)                                  |                    
+| nivel_hbA1c	                 | Nível de hemoglobina glicada (HbA1c                             |
+| nivel_glicose_sanguinea	         | Nível de glicose no sangue no momento da medição                |                          
 | diabetes      	             | Indica se a pessoa tem diabetes (1 = Sim, 0 = Não) 		         |
 
 
@@ -65,18 +64,44 @@ As colunas do dataset estão organizadas da seguinte forma:
 # Análise exploratória de dados 
 
 ## Qual é a predominância de diabetes entre os gêneros?
-colocar grafico  e tabela
 
-A distribuição de pacientes com e sem diabetes está bem equilibrada, 
+![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3odeDiabetes%20(2).png)
 
-## Qual a probabilidade de cada gênero ter diabetes?
+A quantidade de mulheres presentes no dataset é relativamente maior , entretanto podemos perceber que a quantidade de mulheres que possuem diabetes segue semelhante aos homens, o que gera uma proporção menor de mulheres com diabetes conforme dados da tabela a baixo:
 
-## Como está a distribuição das informações fumantes por idade?
+| diabetes| 0 |1|
+|-------- |--|--|
+|Homem|90.09|9.91|
+|Mulher|92.34|7.66|
 
+No dataset homens tem um probabilidade maior de ter diabetes.
+  
 ## O gênero impacta no nivel de glicose no sangue?
 
-## Qual a relação entre as features e o target?
+![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3o%20de%20concentra%C3%A7%C3%A3o%20de%20glicose%20no%20sangue.png)
 
+A concentração de glicose no sangue entre os gêneros segue um mesmo padrão, não havendo impacto o gênero.
+
+## Qual a relação entre as features e o target?
+![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3o%20de%20idade.png)
+A maior parte dos casos de diabetes estão listado em 2019
+
+COLOCAR GRAFICO DE DIABETES X IDADE
+
+Podemos verificar que a distribuição de casos positivos para diabetes segue uma distribuição bimodal, onde podemos verificar 2 picos, indicando que existem duas subpopulações distintas dentro dos dados, na casa dos 60 anos e 80. Há um crescente numero de casos a partir dos 40 anos, tendo seu ápice de casos positivos para diabetes perto dos 60 anos de idade
+
+COLOCAR GREAFICO DO IMC
+
+O imc apresenta um comportamento parecido nas duas classes, positiva e negativa, ambos tem um pico na casa dos 30, analisando o as distriuições podemos concluir que essa feature em relação ao target tem baixa variabilidade explicativa.
+
+COLOCAR GREAFICO DE HBA1C
+
+Pessoas que tem diabetes apresentam nivel de HBA1C maiores que 5, tendo uma alta concentração de pessoas com niveis proximos de 6 e 9.
+![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3o%20de%20nivel_hbA1c.png)
+
+COLOCAR GRAFICO DE GLICOSE SANGUINEA
+
+A prensença de diabetes está com maior concentração em niveis de glicose sanguinea proxima a 150
 
 # Modelo de Predição
 
@@ -85,9 +110,15 @@ As colunas numéricas e categóricas foram separadas e tratadas. As colunas num�
 
 ## Balanceamento de classes
 
-Verificamos que a classe minoritária (1 - possui diabetes)  possui uma representatividade quase definirX menor que a classe majoritária (0 - não possui diabetes), esse desbalanceamento pode influenciar no desempenho do modelo, para tratar esse desbalanceamento optei por utilizar um Class Weight
+Verificamos que a classe minoritária (1 - tem diabetes)  possui uma representatividade de 8.60 % e a classe majoritária (0 - não tem diabetes) 91.40 %, esse desbalanceamento pode influenciar no desempenho do modelo, para tratar esse desbalanceamento optei por utilizar um Class Weight
 
 Calculando chegamos no seguinte peso para cada uma das classes:
+
+| Classe    | Peso         |
+|-----------|-------------|
+| 0  | 0.5480853551593101 |
+| 1  |5.699088145896656   |
+
 
 ## Feature selection
 Após o tratamento das colunas, utilizamos o Rfe para a seleção das features que têm maior impacto no modelo.
