@@ -20,7 +20,7 @@ O primeiro objetivo é responder às seguintes perguntas sobre o dataset:
 
 - Qual é a predominância de diabetes entre os gêneros?
 - Qual a probabilidade de cada gênero ter diabetes?
-- O gênero impacta no nivel de glicose no sangue?
+- Há diferença no nivel de glicose no sangue entre gêneros?
 - Qual a relação entre as features e o target?
 
 
@@ -76,7 +76,7 @@ A quantidade de mulheres presentes no dataset é relativamente maior , entretant
 
 No dataset homens tem um probabilidade maior de ter diabetes.
   
-## O gênero impacta no nivel de glicose no sangue?
+## Há diferença no nivel de glicose no sangue entre gêneros?
 
 ![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3o%20de%20concentra%C3%A7%C3%A3o%20de%20glicose%20no%20sangue.png)
 
