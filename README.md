@@ -95,7 +95,7 @@ A maior parte dos casos de diabetes estão listado em 2019
 Podemos verificar que a distribuição de casos positivos para diabetes segue uma distribuição bimodal, onde podemos verificar 2 picos, indicando que existem duas subpopulações distintas dentro dos dados, na casa dos 60 anos e 80. Há um crescente numero de casos a partir dos 40 anos, tendo seu ápice de casos positivos para diabetes perto dos 60 anos de idade
 
 ### Imc x diabetes
-![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3o%20de%20idade.png)
+![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3o%20de%20imc.png)
 
 O imc apresenta um comportamento parecido nas duas classes, positiva e negativa, ambos tem um pico na casa dos 30, analisando o as distriuições podemos concluir que essa feature em relação ao target tem baixa variabilidade explicativa.
 
@@ -139,10 +139,11 @@ As métricas do modelo
 
 | Métrica   | Resultado   |
 |-----------|-------------|
-| Accuracy  |             |
-| Precison  |             |
-| Recall    |             |
-| Roc Auc   |             |
+| Accuracy  |   0.9608    |
+| Precison  |   0.8482    |
+| Recall    |   0.7013    |
+| f1-score  |   0.7678    |
+| Roc Auc   |   0.9606    |
 
 ![](https://github.com/matheussebastiaomendes/modelo_predicao/blob/main/imagens/comportamento_modelo_LGBMODEL.png)
 
@@ -152,10 +153,12 @@ A validação cruzada divide o dataset em varias partições os chamados folds, 
 
 | Métrica   | Resultado   |
 |-----------|-------------|
-| Accuracy  |             |
-| Precison  |             |
-| Recall    |             |
-| Roc Auc   |             |
+| Accuracy  |   0.9660    |
+| Precison  |   0.8714    |
+| Recall    |   0.7105    |
+| f1-score  |   0.7822    |
+| Roc Auc   |   0.9717    |
+
 
 ## Xgboost Classifier
 
@@ -165,10 +168,12 @@ As métricas do modelo
 
 | Métrica   | Resultado   |
 |-----------|-------------|
-| Accuracy  |             |
-| Precison  |             |
-| Recall    |             |
-| Roc Auc   |             |
+| Accuracy  |   0.9628    |
+| Precison  |   0.8791    |
+| Recall    |   0.6926    |
+| f1-score  |   0.7748    |
+| Roc Auc   |   0.9596    |
+
 
 ![](https://github.com/matheussebastiaomendes/modelo_predicao/blob/main/imagens/comportamento_modelo_RANDOM_FOREST.png)
 
@@ -176,7 +181,10 @@ As métricas do modelo
 
 | Métrica   | Resultado   |
 |-----------|-------------|
-| Accuracy  |             |
-| Precison  |             |
-| Recall    |             |
-| Roc Auc   |             |
+| Accuracy  |   0.9679    |
+| Precison  |   0.8934    |
+| Recall    |   0.7116    |
+| f1-score  |   0.7921    |
+| Roc Auc   |   0.9725    |
+
+
