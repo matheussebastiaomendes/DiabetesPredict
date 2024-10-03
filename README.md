@@ -145,7 +145,7 @@ As métricas do modelo
 | f1-score  |   0.7678    |
 | Roc Auc   |   0.9606    |
 
-##3 Métricas apuradas após a validação cruzada
+### Métricas apuradas após a validação cruzada
 
 A validação cruzada divide o dataset em varias partições os chamados folds, separa partes diferentes dos dados em cada fold para treinamento e validação, a partir dai extraimos as métricas de avaliação de cada treinamento realizado e fazemos uma média dos resultados, nos trazendo uma visão mais realista do real desempenho do modelo.
 
