@@ -16,7 +16,7 @@ Os dados podem ser encontrados no [Kaggle](https://www.kaggle.com/datasets/priya
 
 ### Objetivos e resultados
 
-O primeiro objetivo é responder às seguintes perguntas sobre o dataset:
+Responder os seguintes questionamentos:
 
 - Qual é a predominância de diabetes entre os gêneros?
 - Qual a probabilidade de cada gênero ter diabetes?
@@ -111,10 +111,10 @@ A prensença de diabetes está com maior concentração em niveis de glicose san
 
 # Modelo de Predição
 
-## Pré-processamento dos dados
+### Pré-processamento dos dados
 As colunas numéricas e categóricas foram separadas e tratadas. As colunas numéricas receberam um imputer de mediana da coluna analisada nos valores faltantes. Além disso, também foi feito Standard Scaler para a padronização dos dados, para ter média zero e variância unitária. Já nas colunas categóricas, utilizamos o OneHotEncoder para sua transformação.
 
-## Balanceamento de classes
+### Balanceamento de classes
 
 Verificamos que a classe minoritária (1 - tem diabetes)  possui uma representatividade de 8.60 % e a classe majoritária (0 - não tem diabetes) 91.40 %, esse desbalanceamento pode influenciar no desempenho do modelo, para tratar esse desbalanceamento optei por utilizar um Class Weight
 
@@ -126,14 +126,14 @@ Calculando chegamos no seguinte peso para cada uma das classes:
 | 1  |5.699088145896656   |
 
 
-## Feature selection
+### Feature selection
 Após o tratamento das colunas, utilizamos o Rfe para a seleção das features que têm maior impacto no modelo.
 
 ## Random Forest Classifier
 
 Utilizamos os seguintes parametros no modelo
 
-## Métricas
+### Métricas
 As métricas do modelo 
 
 
@@ -145,9 +145,7 @@ As métricas do modelo
 | f1-score  |   0.7678    |
 | Roc Auc   |   0.9606    |
 
-![](https://github.com/matheussebastiaomendes/modelo_predicao/blob/main/imagens/comportamento_modelo_LGBMODEL.png)
-
-## Métricas apuradas após a validação cruzada
+##3 Métricas apuradas após a validação cruzada
 
 A validação cruzada divide o dataset em varias partições os chamados folds, separa partes diferentes dos dados em cada fold para treinamento e validação, a partir dai extraimos as métricas de avaliação de cada treinamento realizado e fazemos uma média dos resultados, nos trazendo uma visão mais realista do real desempenho do modelo.
 
@@ -159,6 +157,12 @@ A validação cruzada divide o dataset em varias partições os chamados folds, 
 | f1-score  |   0.7822    |
 | Roc Auc   |   0.9717    |
 
+### Matriz de confusão
+![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Matriz%20de%20confusao%20Random%20Forest.png)
+
+### Curva Auc Roc
+
+![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Roc%20Random%20Forest.png)
 
 ## Xgboost Classifier
 
@@ -175,9 +179,7 @@ As métricas do modelo
 | Roc Auc   |   0.9596    |
 
 
-![](https://github.com/matheussebastiaomendes/modelo_predicao/blob/main/imagens/comportamento_modelo_RANDOM_FOREST.png)
-
-## Métricas apuradas após a validação cruzada
+### Métricas apuradas após a validação cruzada
 
 | Métrica   | Resultado   |
 |-----------|-------------|
@@ -187,4 +189,9 @@ As métricas do modelo
 | f1-score  |   0.7921    |
 | Roc Auc   |   0.9725    |
 
+### Matriz de confusão
+![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Matriz%20de%20Confus%C3%A3o%20Xgboost.png)
 
+### Curva Auc Roc
+
+![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/ROC%20Xgboost.png)
