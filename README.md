@@ -127,11 +127,10 @@ Calculando chegamos no seguinte peso para cada uma das classes:
 
 
 ### Feature selection
-Após o tratamento das colunas, utilizamos o Rfe para a seleção das features que têm maior impacto no modelo.
+Após o tratamento das colunas, utilizamos o RFE para a seleção das features que têm maior impacto no modelo. O Recursive Feature Elimination roda o modelo inicialmente com todas as características disponíveis, avaliando sua importância e removendo aquelas que possuem uma menor significância no nosso modelo, até chegar no número escolhido de features para o treinamento, no nosso caso, são 10.
 
 ## Random Forest Classifier
 
-Utilizamos os seguintes parametros no modelo
 
 ### Métricas
 As métricas do modelo 
@@ -160,7 +159,7 @@ A validação cruzada divide o dataset em varias partições os chamados folds, 
 ### Matriz de confusão
 ![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Matriz%20de%20confusao%20Random%20Forest.png)
 
-### Curva Auc Roc
+### Curva Roc
 
 ![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Roc%20Random%20Forest.png)
 
@@ -192,6 +191,10 @@ As métricas do modelo
 ### Matriz de confusão
 ![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Matriz%20de%20Confus%C3%A3o%20Xgboost.png)
 
-### Curva Auc Roc
+### Curva Roc
 
 ![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/ROC%20Xgboost.png)
+
+# Considerações finais
+
+
