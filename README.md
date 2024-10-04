@@ -107,7 +107,7 @@ Pessoas que tem diabetes apresentam nivel de HBA1C maiores que 5, tendo uma alta
 ### Nivel de glicose no sangue x diabetes
 ![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3o%20de%20nivel_glicose_sanguinea.png)
 
-A prensença de diabetes está com maior concentração em niveis de glicose sanguinea proxima a 150
+A prensença de diabetes está com maior concentração em niveis de glicose sanguinea proxima a 150, podemos observar que há uma diferença no comportamento entre as duas classes, com boas separações e diferentes picos entre classes.
 
 # Modelo de Predição
 
