@@ -87,7 +87,7 @@ A concentração de glicose no sangue entre os gêneros segue um mesmo padrão, 
 ### Ano x diabetes
 ![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3o%20de%20ano.png)
 
-A maior parte dos casos de diabetes estão listado em 2019
+Devido à sobreposição significativa entre as classes, podemos esperar que o modelo tenha possiveis dificuldades em distinguir corretamente as classes
 
 ### Idade x diabetes
 ![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3o%20de%20idade.png)
