@@ -102,7 +102,7 @@ O imc apresenta um comportamento parecido nas duas classes, positiva e negativa,
 ### hbA1c x diabetes
 ![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3o%20de%20nivel_hbA1c.png)
 
-Pessoas que tem diabetes apresentam nivel de HBA1C maiores que 5, tendo uma alta concentração de pessoas com niveis proximos de 6 e 9.
+Pessoas que tem diabetes apresentam nivel de HBA1C maiores que 5, tendo uma alta concentração de pessoas com niveis proximos de 6 e 9. Há uma separação interessante entre as classes, o que pode ajudar no desempenho do modelo.
 
 ### Nivel de glicose no sangue x diabetes
 ![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3o%20de%20nivel_glicose_sanguinea.png)
