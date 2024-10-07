@@ -4,9 +4,9 @@ A diabetes é uma condição crônica que afeta a forma como o corpo metaboliza 
 
 # Modelo Preditivo para diagnóstico de diabetes 
 
-Com base no dataset e nas suas características relevantes, desenvolvemos um modelo de machine learning focado na previsão de pacientes que são positivos para diabetes. Inicialmente, foi realizada uma análise exploratória dos dados para identificar padrões, correlações e potenciais outliers, o que nos permitiu uma melhor compreensão do conjunto de dados.
+Com base no dataset e nas suas características relevantes, desenvolvemos um modelo de machine learning focado na previsão de pacientes que são positivos para diabetes. Inicialmente, foi realizada uma análise exploratória dos dados para identificar padrões e correlações , o que nos permitiu uma melhor compreensão do conjunto de dados.
 
-Optámos por testar vários algoritmos de machine learning, comoRandom Forest e XGBoost Classifier, para avaliar qual se adequaria melhor à previsão de diagnósticos de diabetes. Após a fase de treino e validação, o modelo foi otimizado através de técnicas como a validação cruzada e ajuste de hiperparâmetros, maximizando a sua precisão e reduzindo os falsos negativos, que são críticos numa condição como a diabetes.
+Optei por testar mais de um algoritmo de machine learning, como o Random Forest e XGBoost Classifier, para avaliar qual se adequaria melhor à previsão de diagnósticos de diabetes. Após a fase de treino e validação, o modelo foi otimizado através de técnicas como a validação cruzada , maximizando a sua precisão e reduzindo os falsos negativos, que são críticos numa condição como a diabetes.
 
 Com o modelo final, é possível prever com elevada precisão quais pacientes têm maior probabilidade de serem diagnosticados com diabetes, ajudando assim profissionais de saúde a tomar decisões mais informadas e a implementar medidas preventivas com maior antecedência.
 
@@ -18,8 +18,7 @@ Os dados podem ser encontrados no [Kaggle](https://www.kaggle.com/datasets/priya
 
 Responder os seguintes questionamentos:
 
-- Qual é a predominância de diabetes entre os gêneros?
-- Qual a probabilidade de cada gênero ter diabetes?
+- Qual é a predominância de diabetes entre os gêneros e qual deles tem maior probabilidade de ter diabetes?
 - Há diferença no nivel de glicose no sangue entre gêneros?
 - Qual a relação entre as features e o target?
 
@@ -63,7 +62,7 @@ As colunas do dataset estão organizadas da seguinte forma:
 
 # Análise exploratória de dados 
 
-## Qual é a predominância de diabetes entre os gêneros?
+## Qual é a predominância de diabetes entre os gêneros e qual deles tem maior probabilidade de ter diabetes?
 
 ![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3odeDiabetes.png)
 
@@ -92,12 +91,12 @@ Devido à sobreposição significativa entre as classes, podemos esperar que o m
 ### Idade x diabetes
 ![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3o%20de%20idade.png)
 
-Podemos verificar que a distribuição de casos positivos para diabetes segue uma distribuição bimodal, onde podemos verificar 2 picos, indicando que existem duas subpopulações distintas dentro dos dados, na casa dos 60 anos e 80. Há um crescente numero de casos a partir dos 40 anos, tendo seu ápice de casos positivos para diabetes perto dos 60 anos de idade
+Podemos verificar que a distribuição de casos positivos para diabetes segue uma distribuição bimodal, onde há a existência de 2 picos, indicando que existem duas subpopulações distintas dentro dos dados, na casa dos 60 anos e 80. Há um crescente numero de casos a partir dos 40 anos, tendo seu ápice de casos positivos para diabetes perto dos 60 anos de idade. Há um comportamento interessante entre as classes em relação ao target, sugerindo que as diferenças nas distribuições das features contribuem para uma separação mais clara entre as mesmas.
 
 ### Imc x diabetes
 ![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3o%20de%20imc.png)
 
-O imc apresenta um comportamento parecido nas duas classes, positiva e negativa, ambos tem um pico na casa dos 30, analisando o as distriuições podemos concluir que essa feature em relação ao target tem baixa variabilidade explicativa.
+O imc apresenta um comportamento parecido nas duas classes, positiva e negativa, ambos tem um pico na casa dos 30.
 
 ### hbA1c x diabetes
 ![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Distribui%C3%A7%C3%A3o%20de%20nivel_hbA1c.png)
