@@ -162,6 +162,8 @@ A validação cruzada divide o dataset em varias partições os chamados folds, 
 
 ![](https://github.com/matheussebastiaomendes/DiabetesPredict/blob/main/imagens/Roc%20Random%20Forest.png)
 
+A curva roc é mais uma das métricas usadas para medir o desempenho dos modelos de classificação, ela tem 2 eixos  o de verdadeiros positivos (eixo y) e Falsos positivos (eixo X), traçando diferentes limiares de decisão, um limiar é o ponto no qual o modelo decide se a classificação pertence a classe positiva ou negativa. quanto mais a curva estiver proxima do canto superior esquerdo melhor o desempenho do modelo, tendo uma maior facilidade em dividir a qual classe pertence a classificação.
+
 ## Xgboost Classifier
 
 Para este modelo, mantivemos o tratamento das colunas numéricas e categóricas e incluímos alguns parâmetros do modelo Xgboost Classifier.
@@ -196,4 +198,5 @@ As métricas do modelo
 
 # Considerações finais
 
+Ambos os modelos apresentaram resultados semelhantes após a validação cruzada. Como o objetivo principal é identificar os pacientes com diabetes, optámos pelo modelo que utiliza o XGBoost Classifier. Embora a diferença de desempenho entre os modelos seja pequena, o XGBoost destacou-se em todas as métricas avaliadas. Dando prioridade à identificação correta da classe positiva, o recall, que mede a proporção de verdadeiros positivos (TP) em relação ao total de casos positivos esperados (TP / TP + FN), obteve um desempenho superior no nosso modelo.
 
