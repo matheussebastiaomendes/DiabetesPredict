@@ -73,7 +73,7 @@ A quantidade de mulheres presentes no dataset é relativamente maior , entretant
 |Homem|90.09|9.91|
 |Mulher|92.34|7.66|
 
-No dataset homens tem um probabilidade maior de ter diabetes.
+No dataset homens tem uma probabilidade maior de ter diabetes.
   
 ## Há diferença no nivel de glicose no sangue entre gêneros?
 
